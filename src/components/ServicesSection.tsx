@@ -20,13 +20,13 @@ export function ServicesSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-[#FFB088] to-[#FF8C5A] rounded-full blur-3xl" />
             </div>
 
-            <div className="relative max-w-[1400px] mx-auto px-24">
-                <div className="flex items-start justify-between mb-16">
-                    <h2 className="text-5xl font-bold text-white font-[family-name:var(--font-montserrat)]">
+            <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
+                <div className="flex flex-col md:flex-row items-start justify-between mb-16 gap-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-[family-name:var(--font-montserrat)]">
                         My{" "}
                         <span className="text-(--accent-orange)">Services</span>
                     </h2>
-                    <p className="text-white text-lg max-w-xl leading-relaxed">
+                    <p className="text-base sm:text-lg text-white max-w-xl leading-relaxed">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Duis lacus nunc, posuere in justo vulputate, bibendum
                         sodales

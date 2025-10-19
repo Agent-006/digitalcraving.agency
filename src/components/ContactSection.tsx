@@ -15,7 +15,7 @@ export function ContactSection() {
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="max-w-[1200px] mx-auto px-24"
+                className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24"
             >
                 <motion.h2
                     initial={{ opacity: 0, y: 40 }}

@@ -82,13 +82,13 @@ export function BlogSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-[#FFB088] to-[#FF8C5A] rounded-full blur-3xl" />
             </div>
 
-            <div className="relative max-w-[1400px] mx-auto px-24">
-                <div className="flex items-center justify-between mb-12">
+            <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
+                <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-5xl font-bold text-[#FFFBEA] font-[family-name:var(--font-montserrat)]"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#FFFBEA] font-[family-name:var(--font-montserrat)]"
                     >
                         From my blog post
                     </motion.h2>
@@ -98,7 +98,7 @@ export function BlogSection() {
                             backgroundColor: "#FF7F50",
                             color: "#fff",
                         }}
-                        className="text-xl font-bold text-white hover:text-(--accent-orange) transition-colors px-6 py-2 rounded-lg"
+                        className="text-base sm:text-lg md:text-xl font-bold text-white hover:text-(--accent-orange) transition-colors px-6 py-2 rounded-lg"
                     >
                         See All
                     </motion.button>

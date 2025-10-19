@@ -17,9 +17,9 @@ const contactInfo = [
 export function Footer() {
     return (
         <footer className="relative bg-[#171717] rounded-t-[50px] pt-16 pb-8">
-            <div className="max-w-[1400px] mx-auto px-24">
+            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-16">
+                <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
                     <h2 className="text-7xl font-semibold text-[#FCFCFD] font-[family-name:var(--font-montserrat)]">
                         Lets Connect there
                     </h2>
@@ -32,7 +32,7 @@ export function Footer() {
                 <Separator className="bg-gray-700 mb-16" />
 
                 {/* Main Content */}
-                <div className="grid grid-cols-4 gap-16 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 mb-16">
                     {/* Logo & Description */}
                     <div className="space-y-8">
                         <LogoIcon width={368} height={103} />
@@ -101,7 +101,7 @@ export function Footer() {
                 <Separator className="bg-gray-700 mb-8" />
 
                 {/* Copyright */}
-                <div className="flex items-center justify-between text-2xl text-[#FCFCFD]">
+                <div className="flex flex-col md:flex-row items-center justify-between text-base sm:text-lg md:text-2xl text-[#FCFCFD] gap-4">
                     <p>Copyright© 2023 Jayesh. All Rights Reserved.</p>
                     <p>User Terms & Conditions | Privacy Policy</p>
                 </div>

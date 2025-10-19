@@ -4,7 +4,6 @@ import { Navigation } from "@/components/Navigation";
 import { VerticalLabels } from "@/components/VerticalLabels";
 import { HeroSection } from "@/components/HeroSection";
 import { Statistics } from "@/components/Statistics";
-import { ScrollingBanner } from "@/components/ScrollingBanner";
 import { AboutSection } from "@/components/AboutSection";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -15,32 +14,46 @@ import { Footer } from "@/components/Footer";
 
 export default function PortfolioPage() {
     return (
-        <main className="relative min-h-screen overflow-hidden bg-[#F5E6DC]">
+        <main className="relative min-h-screen overflow-x-hidden bg-[#F5E6DC] flex flex-col">
             {/* Hero Section with Dark Background */}
-            <div className="bg-black">
-                <Navigation />
-                <VerticalLabels />
-                <HeroSection />
-                <Statistics />
+            <div className="bg-black w-full">
+                <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                    <Navigation />
+                    <VerticalLabels />
+                    <HeroSection />
+                    <Statistics />
+                </div>
             </div>
 
             {/* About Section */}
-            <AboutSection />
+            <section className="w-full mx-auto max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                <AboutSection />
+            </section>
 
             {/* Services Section */}
-            <ServicesSection />
+            <section className="w-full mx-auto max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                <ServicesSection />
+            </section>
 
             {/* Portfolio Section */}
-            <PortfolioSection />
+            <section className="w-full mx-auto max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                <PortfolioSection />
+            </section>
 
             {/* Blog Section */}
-            <BlogSection />
+            <section className="w-full mx-auto max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                <BlogSection />
+            </section>
 
             {/* Testimonials Section */}
-            <TestimonialsSection />
+            <section className="w-full mx-auto max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                <TestimonialsSection />
+            </section>
 
             {/* Contact Section */}
-            <ContactSection />
+            <section className="w-full mx-auto max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                <ContactSection />
+            </section>
 
             {/* Footer */}
             <Footer />

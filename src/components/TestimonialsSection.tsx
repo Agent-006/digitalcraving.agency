@@ -64,7 +64,7 @@ export function TestimonialsSection() {
 
   return (
     <section className="relative bg-[#171717] py-20">
-      <div className="max-w-[1400px] mx-auto px-24">
+  <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

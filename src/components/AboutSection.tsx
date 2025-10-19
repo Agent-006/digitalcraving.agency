@@ -14,22 +14,19 @@ export function AboutSection() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-[1400px] mx-auto px-24">
-        <div className="grid grid-cols-[1fr_1.2fr] gap-16 mb-20">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 mb-20">
           {/* Left - About Text */}
           <div className="space-y-6">
             <div className="text-sm font-semibold text-gray-500 tracking-wider uppercase">
               About Us
             </div>
-            
-            <h2 className="text-5xl font-bold text-gray-900 leading-tight font-[family-name:var(--font-montserrat)]">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight font-[family-name:var(--font-montserrat)]">
               We Are Experts<br />In Our Field<span className="text-(--accent-orange)">.</span>
             </h2>
-            
-            <p className="text-lg text-gray-700 font-medium">
+            <p className="text-base sm:text-lg text-gray-700 font-medium">
               Our digital company of professionals has been developing products for 15 years.
             </p>
-            
             <div className="text-gray-600 leading-relaxed space-y-4 font-[family-name:var(--font-inter)]">
               <p>
                 Sybex Designs Limited is a UK-based SaaS and design agency that provides cutting-edge digital solutions to businesses worldwide. Specializing in UI/UX design, branding, web development, and AI-driven applications, Sybex Designs is committed to delivering innovative and user-centric experiences. The company focuses on accelerating AI application development, offering end-to-end machine learning lifecycle solutions, and helping brands establish a strong digital presence. With a dedication to clarity, trust, and innovation, Sybex Designs Limited empowers businesses to scale efficiently in the ever-evolving digital landscape.
@@ -41,7 +38,7 @@ export function AboutSection() {
           </div>
 
           {/* Right - Timeline Cards */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <TimelineCard
               icon={Sparkles}
               iconColor="text-indigo-600"
@@ -51,7 +48,6 @@ export function AboutSection() {
               year="2020"
               yearBgColor="bg-indigo-100 text-indigo-700"
             />
-            
             <TimelineCard
               icon={TrendingUp}
               iconColor="text-blue-600"
@@ -61,7 +57,6 @@ export function AboutSection() {
               year="2024"
               yearBgColor="bg-blue-100 text-blue-700"
             />
-            
             <TimelineCard
               icon={Rocket}
               iconColor="text-purple-600"
@@ -71,7 +66,6 @@ export function AboutSection() {
               year="2022"
               yearBgColor="bg-purple-100 text-purple-700"
             />
-            
             <TimelineCard
               icon={Lightbulb}
               iconColor="text-teal-600"
@@ -85,7 +79,7 @@ export function AboutSection() {
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           <StatisticCard
             value="100+"
             label="Projects Completed"
