@@ -20,7 +20,9 @@ export default function PortfolioPage() {
             <div className="bg-black w-full">
                 <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
                     <Navigation />
-                    <VerticalLabels />
+                    <div className="hidden md:block">
+                        <VerticalLabels />
+                    </div>
                     <HeroSection />
                     <Statistics />
                 </div>

@@ -2,6 +2,7 @@
 
 import { AtSign, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Button } from "./ui/button";
 
 const navItems = [
     { label: "Home", active: true },
@@ -24,47 +25,47 @@ export function Navigation() {
     return (
         <>
             {/* Desktop/NavBar for md+ */}
-                    <nav className="hidden md:block fixed top-6 left-8 right-8 z-50 w-auto max-w-[1200px]">
-                        <div className="flex items-center justify-between px-8 py-4 rounded-full border border-(--border-gray) bg-black/80 backdrop-blur-md">
-                            {/* Logo at left */}
-                            <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                                    <AtSign className="w-6 h-6 text-black" />
-                                </div>
-                            </div>
-                            {/* Menu at right */}
-                            <div className="flex items-center gap-8">
-                                {navItems.map((item) => (
-                                    <button
-                                        key={item.label}
-                                        className={`text-sm font-medium transition-colors ${
-                                            item.active
-                                                ? "text-(--accent-orange)"
-                                                : "text-white hover:text-(--accent-orange)"
-                                        }`}
-                                    >
-                                        {item.label}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                    </nav>
-
-            {/* Mobile Hamburger Button */}
-                    <div className="md:hidden fixed top-6 left-4 z-50 flex items-center gap-2">
-                        {/* Logo at left */}
+            <nav className="hidden md:block fixed top-6 left-8 right-8 z-50 w-auto max-w-[1200px]">
+                <div className="flex items-center justify-between px-8 py-4 rounded-full border border-(--border-gray) bg-black/80 backdrop-blur-md">
+                    {/* Logo at left */}
+                    <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
                             <AtSign className="w-6 h-6 text-black" />
                         </div>
-                        {/* Hamburger at left */}
-                        <button
-                            aria-label="Open menu"
-                            onClick={() => setOpen(true)}
-                            className="w-12 h-12 flex items-center justify-center rounded-full bg-black/80 border border-(--border-gray) text-white shadow-lg"
-                        >
-                            <Menu className="w-7 h-7" />
-                        </button>
                     </div>
+                    {/* Menu at right */}
+                    <div className="flex items-center gap-8">
+                        {navItems.map((item) => (
+                            <button
+                                key={item.label}
+                                className={`text-sm font-medium transition-colors ${
+                                    item.active
+                                        ? "text-(--accent-orange)"
+                                        : "text-white hover:text-(--accent-orange)"
+                                }`}
+                            >
+                                {item.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </nav>
+
+            {/* Mobile Hamburger Button */}
+            <div className="md:hidden w-full fixed top-6 z-50 flex items-center justify-between px-4">
+                {/* Logo at left */}
+                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                    <AtSign className="w-6 h-6 text-black" />
+                </div>
+                {/* Hamburger at left */}
+                <Button
+                    aria-label="Open menu"
+                    onClick={() => setOpen(true)}
+                    className="w-12 h-12 flex items-center justify-center rounded-full bg-black/80 border border-(--border-gray) text-white shadow-lg mx-4"
+                >
+                    <Menu className="w-7 h-7" />
+                </Button>
+            </div>
 
             {/* Sliding Mobile Menu (client only) */}
             {isClient && (

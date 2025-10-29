@@ -8,27 +8,27 @@ import { StatCard } from "./StatCard";
 
 export function HeroSection() {
     return (
-        <div className="relative min-h-screen flex items-center justify-center px-24 pt-32 pb-24">
-            <div className="max-w-[1400px] w-full grid grid-cols-2 gap-16 items-center">
+        <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24 pt-12 md:pt-32 pb-8 md:pb-24">
+            <div className="max-w-[1400px] w-full flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 {/* Left Content */}
-                <div className="space-y-8">
-                    <h1 className="text-heading font-[family-name:var(--font-montserrat)] text-white">
+                <div className="space-y-6 md:space-y-8 w-full order-2 md:order-none">
+                    <h1 className="text-2xl sm:text-3xl md:text-heading font-[family-name:var(--font-montserrat)] text-white text-center md:text-left">
                         Crafting Digital Brilliance.
                     </h1>
 
-                    <div className="space-y-4 font-[family-name:var(--font-inter)]">
-                        <p className="text-base text-(--text-gray) leading-relaxed">
+                    <div className="space-y-2 sm:space-y-4 font-[family-name:var(--font-inter)]">
+                        <p className="text-sm sm:text-base text-(--text-gray) leading-relaxed text-center md:text-left">
                             we are sybex designs – a uk-based saas and design
                             agency transforming businesses with cutting-edge
                             digital experiences.
                         </p>
-                        <p className="text-base text-(--text-gray) leading-relaxed">
+                        <p className="text-sm sm:text-base text-(--text-gray) leading-relaxed text-center md:text-left">
                             you can also white label off all our services for
                             the best price on the market.
                         </p>
                     </div>
 
-                    <div className="flex items-center gap-4 pt-4">
+                    <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center md:justify-start">
                         <AvatarCircles
                             avatarUrls={[
                                 {
@@ -47,20 +47,16 @@ export function HeroSection() {
                             className="h-12"
                         />
 
-                        <div className="flex flex-col">
-                            <span className="text-4xl font-bold text-white">
-                                12M
-                            </span>
+                        <div className="flex flex-col items-center sm:items-start">
+                            <span className="text-2xl sm:text-4xl font-bold text-white">12M</span>
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                                <span className="text-sm text-(--text-gray)">
-                                    World active user
-                                </span>
+                                <span className="text-xs sm:text-sm text-(--text-gray)">World active user</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-4 pt-8">
+                    <div className="flex flex-col sm:flex-row items-center gap-4 pt-8 justify-center md:justify-start">
                         <Badge
                             variant="outline"
                             className="px-6 py-3 rounded-full bg-transparent border-(--border-gray) text-white hover:bg-white/5"
@@ -83,8 +79,8 @@ export function HeroSection() {
                 </div>
 
                 {/* Right Content - Hero Image with Floating Cards */}
-                <div className="relative flex items-center justify-center">
-                    <div className="relative w-[600px] h-[600px]">
+                <div className="relative flex items-center justify-center w-full order-1 md:order-none mb-8 md:mb-0">
+                    <div className="relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px]">
                         {/* Abstract Full Background */}
                         <div className="absolute inset-0 bg-black overflow-hidden flex items-center justify-center">
                             {/* Large irregular abstract SVG shape */}
