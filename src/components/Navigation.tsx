@@ -25,8 +25,8 @@ export function Navigation() {
     return (
         <>
             {/* Desktop/NavBar for md+ */}
-            <nav className="hidden md:block fixed top-6 left-8 right-8 z-50 w-auto max-w-[1200px]">
-                <div className="flex items-center justify-between px-8 py-4 rounded-full border border-(--border-gray) bg-black/80 backdrop-blur-md">
+            <nav className="hidden md:block fixed top-6 left-0 right-0 z-50 w-full">
+                <div className="mx-auto flex items-center justify-between px-8 py-4 rounded-full border border-[var(--border-gray,#E5E7EB)] bg-black/80 backdrop-blur-md max-w-[1200px]">
                     {/* Logo at left */}
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
@@ -40,8 +40,8 @@ export function Navigation() {
                                 key={item.label}
                                 className={`text-sm font-medium transition-colors ${
                                     item.active
-                                        ? "text-(--accent-orange)"
-                                        : "text-white hover:text-(--accent-orange)"
+                                        ? "text-[var(--accent-orange,#FF7F50)]"
+                                        : "text-white hover:text-[var(--accent-orange,#FF7F50)]"
                                 }`}
                             >
                                 {item.label}

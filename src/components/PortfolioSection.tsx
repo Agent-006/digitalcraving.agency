@@ -84,7 +84,10 @@ export function PortfolioSection() {
                     variants={{
                         hidden: {},
                         visible: {
-                            transition: { staggerChildren: 0.18, delayChildren: 0.2 },
+                            transition: {
+                                staggerChildren: 0.18,
+                                delayChildren: 0.2,
+                            },
                         },
                     }}
                     className="space-y-12"
@@ -100,16 +103,35 @@ export function PortfolioSection() {
                                         <motion.div
                                             initial={{ opacity: 0, y: 40 }}
                                             whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ duration: 0.8, delay: 0.2 + idx * 0.18 }}
+                                            transition={{
+                                                duration: 0.8,
+                                                delay: 0.2 + idx * 0.18,
+                                            }}
                                             viewport={{ once: true }}
                                             className="w-full h-full bg-gradient-to-br from-[#fff] to-[#F5E6DC] rounded-3xl shadow-2xl border-4 border-[#FF7F50]/20 p-6 sm:p-10 flex flex-col items-center justify-center mx-auto overflow-hidden relative"
-                                            style={{ minHeight: "100%", maxHeight: "100%" }}
+                                            style={{
+                                                minHeight: "100%",
+                                                maxHeight: "100%",
+                                            }}
                                         >
                                             {/* Floating accent shape inside card */}
                                             <motion.div
-                                                initial={{ opacity: 0, scale: 0.7, x: -60, y: -60 }}
-                                                animate={{ opacity: 0.14, scale: 1, x: 0, y: 0 }}
-                                                transition={{ duration: 1.1, delay: 0.3 }}
+                                                initial={{
+                                                    opacity: 0,
+                                                    scale: 0.7,
+                                                    x: -60,
+                                                    y: -60,
+                                                }}
+                                                animate={{
+                                                    opacity: 0.14,
+                                                    scale: 1,
+                                                    x: 0,
+                                                    y: 0,
+                                                }}
+                                                transition={{
+                                                    duration: 1.1,
+                                                    delay: 0.3,
+                                                }}
                                                 className="absolute top-0 left-0 w-[80px] h-[80px] sm:w-[140px] sm:h-[140px] bg-[#FF7F50] rounded-full blur-2xl z-0"
                                             />
                                             <img
@@ -119,8 +141,14 @@ export function PortfolioSection() {
                                             />
                                             <motion.div
                                                 initial={{ opacity: 0, y: 24 }}
-                                                whileInView={{ opacity: 1, y: 0 }}
-                                                transition={{ duration: 0.7, delay: 0.3 }}
+                                                whileInView={{
+                                                    opacity: 1,
+                                                    y: 0,
+                                                }}
+                                                transition={{
+                                                    duration: 0.7,
+                                                    delay: 0.3,
+                                                }}
                                                 viewport={{ once: true }}
                                                 className="flex flex-wrap gap-2 sm:gap-4 mb-4 sm:mb-6 justify-center"
                                             >
@@ -136,9 +164,18 @@ export function PortfolioSection() {
                                             </motion.div>
                                             <div className="flex items-center gap-2 sm:gap-4 mb-2 sm:mb-3">
                                                 <motion.h3
-                                                    initial={{ opacity: 0, x: -20 }}
-                                                    whileInView={{ opacity: 1, x: 0 }}
-                                                    transition={{ duration: 0.6, delay: 0.4 }}
+                                                    initial={{
+                                                        opacity: 0,
+                                                        x: -20,
+                                                    }}
+                                                    whileInView={{
+                                                        opacity: 1,
+                                                        x: 0,
+                                                    }}
+                                                    transition={{
+                                                        duration: 0.6,
+                                                        delay: 0.4,
+                                                    }}
                                                     viewport={{ once: true }}
                                                     className="text-lg sm:text-2xl md:text-4xl font-bold text-[#344054] font-[family-name:var(--font-montserrat)] drop-shadow-lg"
                                                 >
@@ -148,18 +185,27 @@ export function PortfolioSection() {
                                                     href={project.link}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    initial={{ opacity: 0, x: 20 }}
-                                                    whileInView={{ opacity: 1, x: 0 }}
-                                                    transition={{ duration: 0.6, delay: 0.5 }}
+                                                    initial={{
+                                                        opacity: 0,
+                                                        x: 20,
+                                                    }}
+                                                    whileInView={{
+                                                        opacity: 1,
+                                                        x: 0,
+                                                    }}
+                                                    transition={{
+                                                        duration: 0.6,
+                                                        delay: 0.5,
+                                                    }}
                                                     viewport={{ once: true }}
                                                     whileHover={{
                                                         scale: 1.3,
                                                         rotate: 16,
-                                                        boxShadow: "0 6px 24px #FF7F50",
+                                                        boxShadow:
+                                                            "0 6px 24px #FF7F50",
                                                     }}
                                                     className="ml-2 bg-(--accent-orange) rounded-full flex items-center justify-center p-2 font-semibold"
                                                 >
-                                                    Go to
                                                     <ArrowDownRightIcon
                                                         width={28}
                                                         height={28}
@@ -169,8 +215,14 @@ export function PortfolioSection() {
                                             </div>
                                             <motion.p
                                                 initial={{ opacity: 0, y: 24 }}
-                                                whileInView={{ opacity: 1, y: 0 }}
-                                                transition={{ duration: 0.7, delay: 0.6 }}
+                                                whileInView={{
+                                                    opacity: 1,
+                                                    y: 0,
+                                                }}
+                                                transition={{
+                                                    duration: 0.7,
+                                                    delay: 0.6,
+                                                }}
                                                 viewport={{ once: true }}
                                                 className="text-sm sm:text-lg md:text-xl text-[#344054] leading-relaxed max-w-2xl text-center bg-white/70 rounded-xl px-4 py-2 shadow backdrop-blur-md"
                                             >

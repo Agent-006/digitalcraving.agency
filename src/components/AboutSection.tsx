@@ -1,6 +1,6 @@
 "use client";
 
-import { ScrollingBanner } from "./ScrollingBanner";
+import { Marquee } from "./ui/marquee";
 import { TimelineCard } from "./TimelineCard";
 import { StatisticCard } from "./StatisticCard";
 import { NumberTicker } from "./ui/number-ticker";
@@ -23,10 +23,22 @@ export function AboutSection() {
                 transition={{ duration: 1.2, delay: 0.4 }}
                 className="absolute -bottom-32 right-0 w-[220px] h-[220px] bg-[#FFB88C] rounded-full blur-2xl z-0"
             />
-            {/* Scrolling Banner */}
-            <div className="mb-10 sm:mb-16 md:mb-20">
-                <ScrollingBanner />
-            </div>
+                        {/* Marquee Banner */}
+                        <div className="mb-10 sm:mb-16 md:mb-20">
+                                <Marquee
+                                    className="w-full bg-[var(--accent-orange,#FF7F50)] -rotate-2 origin-center scale-110 py-4"
+                                    pauseOnHover={true}
+                                    reverse={false}
+                                    repeat={3}
+                                >
+                                    {["UX Design", "App Design", "Dashboard", "Wireframe", "User Research", "UX Design"].map((service, index) => (
+                                        <div key={index} className="flex items-center px-6">
+                                            <span className="text-2xl font-bold text-white">{service}</span>
+                                            <span className="mx-6 text-white text-2xl">✦</span>
+                                        </div>
+                                    ))}
+                                </Marquee>
+                        </div>
             {/* Main Content */}
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 relative z-10">
                 <div className="flex flex-col lg:grid lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-16 mb-10 sm:mb-16 md:mb-20">

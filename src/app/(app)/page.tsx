@@ -65,7 +65,7 @@ export default function PortfolioPage() {
             <div className="fixed bottom-8 right-8 z-50 flex items-center justify-center">
                 <div className="relative flex items-center justify-center">
                     <SpinningText
-                        className="w-20 h-20 text-white font-semibold mix-blend-difference"
+                        className="w-20 h-20 text-white font-semibold mix-blend-color-burn"
                         duration={8}
                         radius={4.5}
                         style={{ pointerEvents: "none" }}
