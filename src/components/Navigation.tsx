@@ -3,17 +3,18 @@
 import { AtSign, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const navItems = [
-    { label: "Home", active: true },
-    { label: "Branding", active: false },
-    { label: "Digital", active: false },
-    { label: "Marketing", active: false },
-    { label: "Products", active: false },
-    { label: "About Us", active: false },
-    { label: "Contact Us", active: false },
-    { label: "Our blog", active: false },
-    { label: "Careers", active: false },
+    { label: "Home", href: "/", active: true },
+    { label: "Branding", href: "/branding", active: false },
+    { label: "Digital", href: "/digital", active: false },
+    { label: "Marketing", href: "/marketing", active: false },
+    { label: "Products", href: "/products", active: false },
+    { label: "About Us", href: "/about", active: false },
+    { label: "Contact Us", href: "/contact", active: false },
+    { label: "Our blog", href: "/blog", active: false },
+    { label: "Careers", href: "/careers", active: false },
 ];
 
 export function Navigation() {
@@ -36,8 +37,9 @@ export function Navigation() {
                     {/* Menu at right */}
                     <div className="flex items-center gap-8">
                         {navItems.map((item) => (
-                            <button
+                            <Link
                                 key={item.label}
+                                href={item.href}
                                 className={`text-sm font-medium transition-colors ${
                                     item.active
                                         ? "text-[var(--accent-orange,#FF7F50)]"
@@ -45,7 +47,7 @@ export function Navigation() {
                                 }`}
                             >
                                 {item.label}
-                            </button>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -90,17 +92,18 @@ export function Navigation() {
                             </span>
                         </div>
                         {navItems.map((item) => (
-                            <button
+                            <Link
                                 key={item.label}
+                                href={item.href}
                                 className={`text-base font-medium text-left transition-colors ${
                                     item.active
-                                        ? "text-(--accent-orange)"
-                                        : "text-white hover:text-(--accent-orange)"
+                                        ? "text-[var(--accent-orange,#FF7F50)]"
+                                        : "text-white hover:text-[var(--accent-orange,#FF7F50)]"
                                 }`}
                                 onClick={() => setOpen(false)}
                             >
                                 {item.label}
-                            </button>
+                            </Link>
                         ))}
                     </div>
                 </div>

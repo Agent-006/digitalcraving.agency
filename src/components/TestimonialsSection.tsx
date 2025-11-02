@@ -88,7 +88,7 @@ export function TestimonialsSection() {
 				initial={{ opacity: 0, scale: 0.7 }}
 				animate={{ opacity: 0.18, scale: 1 }}
 				transition={{ duration: 1.2, delay: 0.2 }}
-				className="absolute -top-24 -left-24 w-[300px] h-[300px] bg-[--accent-orange] rounded-full blur-3xl z-0"
+				className="absolute -top-24 -left-24 w-[300px] h-[300px] bg-[var(--accent-orange,#FF7F50)] rounded-full blur-3xl z-0"
 			/>
 			<motion.div
 				initial={{ opacity: 0, scale: 0.7 }}
@@ -105,7 +105,7 @@ export function TestimonialsSection() {
 				>
 					<h2 className="text-6xl font-medium text-[#FCFCFD] leading-tight font-[family-name:var(--font-montserrat)]">
 						Testimonials That Speak to My{" "}
-						<span className="text-(--accent-orange)">Results</span>
+						<span className="text-[var(--accent-orange,#FF7F50)]">Results</span>
 					</h2>
 					<motion.p
 						initial={{ opacity: 0, x: 40 }}
@@ -119,7 +119,7 @@ export function TestimonialsSection() {
 					</motion.p>
 				</motion.div>
 				<div className="flex justify-center items-center mt-20">
-					<div className="w-full max-w-3xl" style={{ minHeight: 340 }}>
+					<div className="w-full max-w-3xl relative min-h-[340px] overflow-hidden">
 						<AnimatePresence initial={false} custom={direction}>
 							<motion.div
 								key={activeIndex}
@@ -139,7 +139,7 @@ export function TestimonialsSection() {
 									x: direction === 1 ? -100 : 100,
 								}}
 								transition={{ type: "spring", stiffness: 400, damping: 40 }}
-								className="glassmorphic p-8 space-y-6 bg-white/10 backdrop-blur-md border-white/20 rounded-2xl shadow-lg cursor-grab"
+								className="absolute inset-0 glassmorphic p-8 space-y-6 bg-white/10 backdrop-blur-md border-white/20 rounded-2xl shadow-lg cursor-grab"
 								style={{ touchAction: "pan-x", minHeight: 340 }}
 							>
 								<motion.div
@@ -210,7 +210,7 @@ export function TestimonialsSection() {
 							transition={{ duration: 0.4, delay: 0.1 * idx }}
 							className={`w-4 h-4 rounded-full transition-all duration-300 ${
 								activeIndex === idx
-									? "bg-(--accent-orange) scale-110"
+									? "bg-[var(--accent-orange,#FF7F50)] scale-110"
 									: "bg-white/20"
 							}`}
 							style={{ cursor: "pointer" }}
