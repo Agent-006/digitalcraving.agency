@@ -19,7 +19,7 @@ export default function PortfolioPage() {
             {/* Hero Section with Dark Background */}
             <div className="bg-black w-full">
                 <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
-                    <Navigation />
+                    {/* <Navigation /> */}
                     <div className="hidden md:block">
                         <VerticalLabels />
                     </div>
@@ -59,7 +59,7 @@ export default function PortfolioPage() {
             </section>
 
             {/* Footer */}
-            <Footer />
+            {/* <Footer /> */}
 
             {/* Scroll to Top Button with SpinningText */}
             <div className="fixed bottom-8 right-8 z-50 flex items-center justify-center">
